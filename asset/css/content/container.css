@@ -1,0 +1,151 @@
+@import '../shared.css';
+@import '../../../public/css/animation/bounch.css';
+
+.container-page {
+    overflow: hidden;
+}
+
+/* Mục giới thiệu dịch vụ */
+.logo-introduce {
+    transition: .3s ease-in-out;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    -webkit-box-shadow: -1px 5px 19px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 5px 19px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 5px 19px -9px rgba(0, 0, 0, 0.75);
+}
+
+.logo-introduce:hover {
+    transform: translateX(25px);
+}
+
+/* Mục các bước thực hiện */
+.text-step{
+    text-align:center;
+}
+.image-step-detail {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    -webkit-box-shadow: 10px 10px 5px -9px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 10px 10px 5px -9px rgba(0, 0, 0, 0.46);
+    box-shadow: 10px 10px 5px -9px rgba(0, 0, 0, 0.46);
+}
+
+.step1 {
+    background-image: url('../../../images/content/input-data.jpg');
+    background-size: contain;
+}
+
+.step2 {
+    background-image: url('../../../images/content/handling-data.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.step3 {
+    background-image: url('../../../images/content/success.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title-step {
+    color: var(--Color-Primary-Blue);
+    font-weight: bold;
+}
+
+/* Lý do chọn dịch vụ */
+#reason{
+    background: url('../../../images/content/reason.jpg') no-repeat fixed;
+    background-size: cover;
+    max-width: 100%;
+}
+.content-reason-service{
+    background: rgba(255,255,255,0.8);
+}
+.split-padding3{
+    padding:var(--Padding-Of-Page);
+}
+.advantage-services{
+    font-size: 30px;
+}
+.icon-advantage{
+    background:var(--Color-Primary-Orange);
+    border-radius: 50%;
+}
+.title-advantage{
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.4;
+    font-weight: bold;
+}
+.text-advantage{
+    font-size: 15px;
+    color:gray;
+    text-align: justify;
+    line-height: 1.4;
+}
+.text-advantage::before{
+    content: "\25BA";
+    padding-right: 10px;
+    color:black;
+}
+
+.animation-bounch{
+    animation: bounce 1.5s infinite;
+}
+
+
+/* Modal bảng giá */
+.item-package{
+    margin-bottom: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.46);
+    -moz-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.46);
+    box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.46);
+    transition: .3s ease;
+    cursor: pointer;
+}
+.item-package:hover{
+    transform: translate(0px,-10px);
+}
+
+
+
+.title-package{
+    background:#fff;
+    border-radius: 20px;
+    box-shadow:inset 2px 2px 2px #333;
+}
+.item1{
+    background:rgb(10, 147, 169);
+}
+.item2{
+    background:#324a5e;
+}
+.item3{
+    background:#f2513e;
+}
+.item4{
+    background:#0aa976;
+}
+
+
+
+.quantity-bill-package{
+    color:var(--Color-Primary-White);
+    border-bottom: 5px solid var(--Color-Primary-White);
+}
+.money-bill-package{
+    color:var(--Color-Primary-White);
+}
+
+.content-bill-package{
+    border-top: 2px dotted var(--Color-Primary-White);
+    font-weight: bold;
+    color:var(--Color-Primary-White) ;
+    padding:15px 0;
+    font-size: 16px;
+}

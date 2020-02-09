@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.min.css">
+
+    <link href="./public/css/hover/hover.css" rel="stylesheet">
+    <link href="./public/css/searchBox/searchBar.css" rel="stylesheet">
+
+
+    <!-- The CSS -->
+    <link rel="stylesheet" href="./asset/css/style.css">
+
+
+    <!-- Font awsome icon -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../public/css/custom/navbar-right.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <title>Đọc Hóa Đơn Điện Tử | R - Invoice Reader</title>
+    <script>
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Button Phone  -->
+    <div class="phonering-alo-phone phonering-alo-green phonering-alo-show" id="phonering-alo-phoneIcon">
+        <div class="container-phone">
+            <div class="phonering-alo-ph-circle"></div>
+            <div class="phonering-alo-ph-circle-fill"></div>
+            <a href="tel:+84936929237" class="pps-btn-img" title="Liên hệ">
+                <div class="phonering-alo-ph-img-circle"></div>
+            </a>
+        </div>
+    </div>
+    <!-- Modal Content-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12">
+                    <h3 class="title">Bảng giá các gói dịch vụ</h3>
+                    <hr width="300">
+                </div>
+                <div class="col-md-12 col-lg-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pr-4">
+                            <div class="row item-package item1 pb-2 pt-2">
+                                <div class="col-md-12 pb-3">
+                                    <h3 class="title-package p-3" style="color:rgb(10, 147, 169)">Hóa đơn #1</h3>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <h4 class="quantity-bill-package"><span style="font-size:40px">100</span> Hóa Đơn
+                                    </h4>
+                                    <div></div>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <h5 class="money-bill-package"><span
+                                            style="font-size:30px; color:yellow;">99.000</span> Vnđ</h5>
+                                </div>
+                                <div class="col-md-12 pb-4">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="content-bill-package">Miễn phí lựa chọn mẫu hóa đơn</p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <p class="content-bill-package">Không thời gian sử dụng</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Không cần cài đặt</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Hướng dẫn thủ tục phát hành.</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Phí khởi tạo lần đầu: <br> <del>800.000
+                                                    VNĐ</del></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <button type="button" class="btn btn-outline-dark"
+                                        style="color:#fff; border:2px solid #fff; font-size:24px">ĐĂNG KÝ</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 pr-4">
+                            <div class="row item-package item2 pb-2 pt-2">
+                                <div class="col-md-12 pb-3">
+                                    <h3 class="title-package p-3" style="color:#324a5e">Hóa đơn #2</h3>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <h4 class="quantity-bill-package"><span style="font-size:40px">350</span> Hóa Đơn
+                                    </h4>
+                                    <div></div>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <h5 class="money-bill-package"><span
+                                            style="font-size:30px; color:yellow;">299.000</span> Vnđ</h5>
+                                </div>
+                                <div class="col-md-12 pb-4">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="content-bill-package">Miễn phí lựa chọn mẫu hóa đơn</p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <p class="content-bill-package">Không thời gian sử dụng</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Không cần cài đặt</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Hướng dẫn thủ tục phát hành.</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Phí khởi tạo lần đầu: <br> <del>800.000
+                                                    VNĐ</del></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <button type="button" class="btn btn-outline-dark"
+                                        style="color:#fff; border:2px solid #fff; font-size:24px">ĐĂNG KÝ</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 pr-4">
+                            <div class="row item-package item3 pb-2 pt-2">
+                                <div class="col-md-12 pb-3">
+                                    <h3 class="title-package p-3" style="color:#f2513e">Hóa đơn #3</h3>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <h4 class="quantity-bill-package"><span style="font-size:40px">1.500</span> Hóa Đơn
+                                    </h4>
+                                    <div></div>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <h5 class="money-bill-package"><span
+                                            style="font-size:30px; color:yellow;">999.000</span> Vnđ</h5>
+                                </div>
+                                <div class="col-md-12 pb-4">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="content-bill-package">Miễn phí lựa chọn mẫu hóa đơn</p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <p class="content-bill-package">Không thời gian sử dụng</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Không cần cài đặt</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Hướng dẫn thủ tục phát hành.</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Phí khởi tạo lần đầu: <br> <del>800.000
+                                                    VNĐ</del></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <button type="button" class="btn btn-outline-dark"
+                                        style="color:#fff; border:2px solid #fff; font-size:24px">ĐĂNG KÝ</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 pr-4">
+                            <div class="row item-package item4 pb-2 pt-2">
+                                <div class="col-md-12 pb-3">
+                                    <h3 class="title-package p-3" style="color:#0aa976">Hóa đơn #4</h3>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <h4 class="quantity-bill-package"><span style="font-size:40px">4.000</span> Hóa Đơn
+                                    </h4>
+                                    <div></div>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <h5 class="money-bill-package"><span
+                                            style="font-size:30px; color:yellow;">1.999.000</span> Vnđ</h5>
+                                </div>
+                                <div class="col-md-12 pb-4">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="content-bill-package">Miễn phí lựa chọn mẫu hóa đơn</p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <p class="content-bill-package">Không thời gian sử dụng</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Không cần cài đặt</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Hướng dẫn thủ tục phát hành.</p>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <p class="content-bill-package">Phí khởi tạo lần đầu: <br> <del>800.000
+                                                    VNĐ</del></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 pb-3">
+                                    <button type="button" class="btn btn-outline-dark"
+                                        style="color:#fff; border:2px solid #fff; font-size:24px">ĐĂNG KÝ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+
+        <div class="header-top">
+            <div class="container">
+                <!-- Navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="./index.html"><img width="150" id="logoCop"
+                            src="/images/logo/r-invonce-horizal.png" alt="r-invonce-horizal" /></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active item-nav">
+                                <a href="#" class="btn btn-nav active">Giới Thiệu</a>
+                            </li>
+                            <li class="nav-item item-nav">
+                                <a href="#" class="btn btn-nav">tính năng</a>
+                            </li>
+                            <li class="nav-item item-nav">
+                                <a href="#" class="btn btn-nav">hướng dẫn</a>
+                            </li>
+                            <li class="nav-item item-nav">
+                                <a href="#" class="btn btn-nav">hỗ trợ</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0 searchbar">
+                            <input class="searchBox" type="text" placeholder="Search.." name="search">
+                            <button class="searchButton" type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </nav>
+                <!-- Test -->
+            </div>
+        </div>
+    </div>
+    <main class="container-page">
+        <section class="row">
+            <div class="slide-services col-md-12 pb-5">
+                <div class="header-intro-service">
+                    <!-- Slider -->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                            </li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./images/slide/slide1.jpg" class="d-block w-100 h-400" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/slide/slide2.jpg" class="d-block w-100 h-400" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/slide/slide3.jpg" class="d-block w-100 h-400" alt="...">
+                            </div>
+
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Giới thiệu về dịch vụ -->
+            <div class="col-md-12 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="title">Phần mềm đọc hóa đơn điện tử</h4>
+                                    <hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="text"><strong class="orange"><span class="blue">I</span>nvoice <span
+                                                class="blue">R</span>eader</strong> là phần mềm do Công ty cổ phần Đầu
+                                        tư Kỷ
+                                        Nguyên Xanh (GEIC) phát triển nhằm cung cấp dịch vụ tạo lập và xử lý hóa đơn
+                                        điện tử
+                                        cho doanh nghiệp.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="logo-content text-center">
+                                <img class="logo-introduce" height="270px" src="/images/logo/r-invonce-square.png"
+                                    alt="r-invonce-horizal" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quy trình hệ thống -->
+            <div class="col-md-12 pb-5">
+                <div class="row pb-5">
+                    <div class="col-md-12 text-center">
+                        <h3 class="title title-guide">Quy trình của hệ thống</h3>
+                        <hr width="200">
+                    </div>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 pb-3">
+                                    <div class="row">
+                                        <div class="image-step col-md-12 mb-4">
+                                            <div class="image-step-detail step1"></div>
+                                        </div>
+                                        <div class="content-step col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h5 class="title-step text-center">Nhập liệu</h5>
+                                                </div>
+                                                <div class="col-md-12 text-step">
+                                                    <p>Khách hàng tải các hóa đơn (pdf, xml) vào cổng xử lý dịch vụ
+                                                        "Ehoadon"</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 pb-3">
+                                    <div class="row">
+                                        <div class="image-step col-md-12 mb-4">
+                                            <div class="image-step-detail step2"></div>
+                                        </div>
+                                        <div class="content-step col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h5 class="title-step text-center">Xử lý</h5>
+                                                </div>
+                                                <div class="col-md-12 text-step">
+                                                    <p>Hệ thống "Ehoadon" xử lý đọc và trích xuất thông tin các hóa đơn.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 pb-3">
+                                    <div class="row">
+                                        <div class="image-step col-md-12 mb-4">
+                                            <div class="image-step-detail step3"></div>
+                                        </div>
+                                        <div class="content-step col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h5 class="title-step text-center">Hoàn tất</h5>
+                                                </div>
+                                                <div class="col-md-12 text-step">
+                                                    <p>Hệ thống xuất ra tập tin MS Excel, khách hàng tải về máy tính cá
+                                                        nhân</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <!-- Lý do chọn dịch vụ -->
+            <div class="col-md-12" id="reason">
+                <div class="row">
+                    <div class="col-md-8 col-lg-8 col-sm-8 split-padding3 content-reason-service">
+                        <div class="row ">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <h3 class="title">Tại sao lại chọn dịch vụ của chúng tôi ?</h3>
+                                    <hr width="200">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="row">
+                                    <div class="col-md-12 pb-3">
+                                        <p class="text">Phần mềm <strong class="orange"><span
+                                                    class="blue">I</span>nvoice <span
+                                                    class="blue">R</span>eader</strong> mang lại nhiều lợi ích thiết
+                                            thực cho doanh nghiệp như:
+                                            Giảm chi phí in ấn, lưu trữ và vận chuyển hóa đơn, bảo mật an toàn dữ
+                                            liệu...
+                                        </p>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-lg-3">
+                                        <h3 class="title" style="text-decoration: underline;">Ngoài ra:</h3>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-lg-7 advantage-services">
+                                        <div class="row">
+                                            <div class="col-md-12 pb-3">
+                                                <div class="row">
+                                                    <div class="col-md-1 icon-advantage">
+                                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="row">
+                                                            <div class="col-md-12 title-advantage">
+                                                                <p>Tiết kiệm thời gian</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <p class="text-advantage">Hỗ trợ nhân viên nhập liệu tiết kiệm
+                                                            thời gian, giảm thiểu sai sót từ nhập thông tin hóa đơn,
+                                                            giảm nhân sự nhập liệu cho công ty.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pb-3">
+                                                <div class="row">
+                                                    <div class="col-md-1 icon-advantage">
+                                                        <i class="fa fa-upload" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col-md-12 title-advantage">
+                                                                <p>Tự động hóa quy trình</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <p class="text-advantage">Trích xuất (đọc) các thông tin hóa đơn
+                                                            điện tử (mã các hóa đơn, tổng tiền, các chi tiết hóa đơn)
+                                                            hoàn toàn tự động.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pb-3">
+                                                <div class="row">
+                                                    <div class="col-md-1 icon-advantage">
+                                                        <i class="fa fa-globe" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="row">
+                                                            <div class="col-md-12 title-advantage">
+                                                                <p>Xử lý đa tác vụ theo tiêu chuẩn</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <p class="text-advantage">Trích xuất số lượng lớn hóa đơn tại 1
+                                                            thời điểm theo định dạng PDF hoặc XML xuất ra định dạng MS
+                                                            Excel làm dữ liệu đầu vào cho các phần mềm kế toán.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="text-center">
+                                    <i class="fa fa-angle-double-down animation-bounch"
+                                        style="font-size:48px;color:red"></i>
+                                    <h3 class="title"
+                                        style="background:#000; color:#fff;padding:5px; border-radius:12px"
+                                        onclick="openNav()">Xem chi
+                                        tiết bảng giá</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Các loại định dạng -->
+            <div class="col-md-12 pt-5">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3 class="title title-guide">Định dạng hỗ trợ</h3>
+                        <hr width="200">
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <div class="row">
+                            <div class="col-md-6 text-center" style="border-right:1px solid #eeeeee">
+                                <img src="/images/logo/pdf.png">
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img src="/images/logo/xml.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Lịch sử của công ty -->
+            <!-- <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+            </div> -->
+        </section>
+    </main>
+    <!-- Footer of page -->
+    <!-- Footer -->
+    <footer class="pt-5 pb-4" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 mt-2 mb-4">
+                    <h5 class="mb-4 font-weight-bold">Thông tin liên lạc</h5>
+                    <p class="mb-4"></p>
+                    <ul class="f-address">
+                        <li>
+                            <div class="row">
+                                <div class="col-1"><i class="fas fa-map-marker"></i></div>
+                                <div class="col-10">
+                                    <h6 class="font-weight-bold mb-0">Địa chỉ:</h6>
+                                    <p>06 Trần Văn Ơn, Trường Đại Học Thủ Dầu Một, </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-1"><i class="far fa-envelope"></i></div>
+                                <div class="col-10">
+                                    <h6 class="font-weight-bold mb-0">Liên hệ nếu có thắc mắc?</h6>
+                                    <p><a href="#">kynguyenbd@gmail.com</a></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-1"><i class="fas fa-phone-volume"></i></div>
+                                <div class="col-10">
+                                    <h6 class="font-weight-bold mb-0">SĐT:</h6>
+                                    <p><a href="#">+84 936 929 237</a></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                    <h5 class="mb-4 font-weight-bold">Nhà cung cấp</h5>
+                    <ul class="recent-post">
+                        <li>
+                            <label class="mr-3"><img width="100" src="./images/logo/viettel.jpg">
+                            </label>
+                        </li>
+                        <li>
+                            <label class="mr-3"><img width="100" src="./images/logo/vnpt.jpg"></label>
+                        </li>
+                        <li>
+                            <label class="mr-3"><img width="100" src="./images/logo/bkav.jpg"></label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                    <h5 class="mb-4 font-weight-bold">Liên hệ với chúng tôi</h5>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Địa chỉ email..">
+                        <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>
+                    </div>
+                    <ul class="social-pet mt-4">
+                        <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright -->
+    <section class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="text-center text-white">
+                        &copy; Bản quyền thuộc về <strong>CÔNG TY CỔ PHẦN ĐẦU TƯ KỶ NGUYÊN XANH (GEIC).</strong> All
+                        rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./public/js/custom/smoothscroll.js"></script>
+
+    <!-- tooltip -->
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <!-- Reponsive Logo -->
+    <script>
+        (() => {
+            var x = $(window).width();
+            if (x == 320) {
+                $('#logoCop').attr('src', '/images/logo/r-invonce.png');
+                $('#logoCop').attr('width', '50px');
+            }
+        })();
+    </script>
+</body>
+
+</html>
