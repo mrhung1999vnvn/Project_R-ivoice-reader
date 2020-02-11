@@ -10,5 +10,10 @@
     text-transform: uppercase;
 }
 
+.text-phone{
+    font-weight: bold;
+    color: var(--Color-Primary-Orange);
+    text-decoration: underline;
+}
 
 

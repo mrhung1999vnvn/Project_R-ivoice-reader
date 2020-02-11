@@ -20,6 +20,22 @@
     transform: translateX(25px);
 }
 
+
+.container-features{
+    background:#fff;
+    border:none;
+    border-radius: 14px;
+    line-height: 1.2;
+    -webkit-box-shadow: 8px 16px 45px -6px rgba(117,109,109,1);
+-moz-box-shadow: 8px 16px 45px -6px rgba(117,109,109,1);
+box-shadow: 8px 16px 45px -6px rgba(117,109,109,1);
+}
+.item-features{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom:28px
+}
+
 /* Mục các bước thực hiện */
 .text-step{
     text-align:center;
@@ -39,6 +55,8 @@
     background-size: contain;
 }
 
+
+
 .step2 {
     background-image: url('../../../images/content/handling-data.png');
     background-size: 100% 100%;
@@ -55,6 +73,8 @@
     color: var(--Color-Primary-Blue);
     font-weight: bold;
 }
+
+
 
 /* Lý do chọn dịch vụ */
 #reason{

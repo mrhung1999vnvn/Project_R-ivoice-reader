@@ -32,6 +32,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
     <title>Đọc Hóa Đơn Điện Tử | R - Invoice Reader</title>
@@ -43,17 +44,64 @@
 </head>
 
 <body>
+    <!-- Button back to top-->
+    <a href="#" class="arrow-to-top" id="scrollToTop"><i class="fas fa-arrow-up"></i></a>
+
+
+
     <!-- Button Phone  -->
     <div class="phonering-alo-phone phonering-alo-green phonering-alo-show" id="phonering-alo-phoneIcon">
         <div class="container-phone">
             <div class="phonering-alo-ph-circle"></div>
             <div class="phonering-alo-ph-circle-fill"></div>
-            <a href="tel:+84936929237" class="pps-btn-img" title="Liên hệ">
+            <a href="tel:+84914290456" class="pps-btn-img" title="Liên hệ">
                 <div class="phonering-alo-ph-img-circle"></div>
             </a>
         </div>
     </div>
-    <!-- Modal Content-->
+
+
+    <!-- Modal Cardvisit-->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg modal-dialog-top">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header text-center">
+                    <h3 class="modal-title ">Công ty Cổ Phần Đầu Tư Kỷ Nguyên Xanh (GEIC)</h3>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body ">
+                    <div class="row container">
+                        <div class="col-md-12 mb-2">
+                            <p style="color:var(--Color-Primary-Orange); font-weight: bold;"><i
+                                    class="fa fa-map-marker"></i> Địa chỉ:</p>
+                            <p style="font-style: italic;">- Số 53/14, Phạm Ngọc Thạch, Tổ 56, Khu 5, Phường Hiệp Thành,
+                                Thành phố Thủ Dầu Một, Tỉnh Bình Dương</p>
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <p style="color:var(--Color-Primary-Orange); font-weight: bold;"><i class="fa fa-envelope"
+                                    aria-hidden="true"></i> Email:</p>
+                            <p style="font-style: italic;">- kynguyenbd@gmail.com</p>
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <p style="color:var(--Color-Primary-Orange); font-weight: bold;"><i class="fa fa-envelope"
+                                    aria-hidden="true"></i> Mã số thuế:</p>
+                            <p style="font-style: italic;">- 3702845370</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button style="background:#0f4c75; color:#fff" type="button" class="btn"
+                        data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal Content Price Of Service-->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="container">
@@ -76,7 +124,8 @@
                                 </div>
                                 <div class="col-md-12 pb-3">
                                     <h5 class="money-bill-package"><span
-                                            style="font-size:30px; color:yellow;">99.000</span> Vnđ</h5>
+                                            style="font-size:30px; color:yellow; text-decoration: underline;">Liên
+                                            hệ</span></h5>
                                 </div>
                                 <div class="col-md-12 pb-4">
                                     <div class="row">
@@ -116,7 +165,8 @@
                                 </div>
                                 <div class="col-md-12 pb-3">
                                     <h5 class="money-bill-package"><span
-                                            style="font-size:30px; color:yellow;">299.000</span> Vnđ</h5>
+                                            style="font-size:30px; color:yellow; text-decoration: underline;">Liên
+                                            hệ</span></h5>
                                 </div>
                                 <div class="col-md-12 pb-4">
                                     <div class="row">
@@ -156,7 +206,8 @@
                                 </div>
                                 <div class="col-md-12 pb-3">
                                     <h5 class="money-bill-package"><span
-                                            style="font-size:30px; color:yellow;">999.000</span> Vnđ</h5>
+                                            style="font-size:30px; color:yellow; text-decoration: underline;">Liên
+                                            hệ</span></h5>
                                 </div>
                                 <div class="col-md-12 pb-4">
                                     <div class="row">
@@ -196,7 +247,8 @@
                                 </div>
                                 <div class="col-md-12 pb-3">
                                     <h5 class="money-bill-package"><span
-                                            style="font-size:30px; color:yellow;">1.999.000</span> Vnđ</h5>
+                                            style="font-size:30px; color:yellow; text-decoration: underline;">Liên
+                                            hệ</span></h5>
                                 </div>
                                 <div class="col-md-12 pb-4">
                                     <div class="row">
@@ -244,25 +296,47 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
+                    <div class=" collapse navbar-collapse row" id="navbarSupportedContent">
+                        <ul class="col-md-8 navbar-nav">
                             <li class="nav-item active item-nav">
-                                <a href="#" class="btn btn-nav active">Giới Thiệu</a>
+                                <a href="#gioithieu" class="btn btn-nav active">Giới Thiệu</a>
                             </li>
                             <li class="nav-item item-nav">
-                                <a href="#" class="btn btn-nav">tính năng</a>
+                                <a href="#tinhnang" class="btn btn-nav">tính năng</a>
                             </li>
                             <li class="nav-item item-nav">
-                                <a href="#" class="btn btn-nav">hướng dẫn</a>
+                                <a href="#quitrinh" class="btn btn-nav">hướng dẫn</a>
                             </li>
                             <li class="nav-item item-nav">
-                                <a href="#" class="btn btn-nav">hỗ trợ</a>
+                                <a href="javascript:void(0)" class="btn btn-nav" data-toggle="modal"
+                                    data-target="#myModal">hỗ trợ</a>
                             </li>
+
                         </ul>
-                        <form class="form-inline my-2 my-lg-0 searchbar">
+                        <div class="col-md-4 phone-nav">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <i style="font-size: 40px; color:var(--Color-Primary-Orange)"
+                                        class="fa fa-phone"></i>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="text-phone">
+                                                <p class="text-phone">SĐT Liên Lạc:</p>
+                                            </div>
+                                            <div>
+                                                <p><span style="font-weight: bold;">Lộc:</span> 0914.290.456</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <form class="form-inline my-2 my-lg-0 searchbar">
                             <input class="searchBox" type="text" placeholder="Search.." name="search">
                             <button class="searchButton" type="submit"><i class="fa fa-search"></i></button>
-                        </form>
+                        </form> -->
                     </div>
                 </nav>
                 <!-- Test -->
@@ -308,26 +382,89 @@
                 </div>
             </div>
             <!-- Giới thiệu về dịch vụ -->
-            <div class="col-md-12 pb-5">
+            <div class="col-md-12 pb-5" id="gioithieu">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h4 class="title">Phần mềm đọc hóa đơn điện tử</h4>
-                                    <hr>
-                                </div>
                                 <div class="col-md-12">
-                                    <p class="text"><strong class="orange"><span class="blue">I</span>nvoice <span
-                                                class="blue">R</span>eader</strong> là phần mềm do Công ty cổ phần Đầu
-                                        tư Kỷ
-                                        Nguyên Xanh (GEIC) phát triển nhằm cung cấp dịch vụ tạo lập và xử lý hóa đơn
-                                        điện tử
-                                        cho doanh nghiệp.</p>
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <h4 class="title">Phần mềm đọc hóa đơn điện tử</h4>
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <p class="text" style="letter-spacing: 1px;"><strong class="orange"><span
+                                                        class="blue">I</span>nvoice
+                                                    <span class="blue">R</span>eader</strong> là phần mềm do Công ty cổ
+                                                phần Đầu
+                                                tư Kỷ
+                                                Nguyên Xanh (GEIC) phát triển nhằm cung cấp dịch vụ tạo lập và xử lý hóa
+                                                đơn
+                                                điện tử
+                                                cho doanh nghiệp.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" id="tinhnang">
+                                    <div class="row p-4">
+                                        <div class="col-md-12 text-center title-features">
+                                            <p class="text" style="font-weight: bold;"><strong class="orange"
+                                                    style="font-size: 30px;"><span class="blue">I</span>nvoice
+                                                    <span class="blue">R</span>eader</strong></p>
+                                            <p class="text-left" style="font-weight: bold; font-size: 18px;">còn là giải
+                                                pháp:</p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="row container-features p-3 mt-3">
+                                                        <div class="col-md-12 features-detail p-3">
+                                                            <div class="col-md-12 item-features">
+                                                                <p><i style="color:#0aa976" class="fa fa-check"
+                                                                        aria-hidden="true"></i> Hỗ trợ nhân viên nhập
+                                                                    liệu thông tin hóa đơn <span
+                                                                        style="border-bottom: 3px dotted; color:#0aa976; font-size: 23px;">nhanh
+                                                                        chóng</span> và <span
+                                                                        style="border-bottom: 3px dotted; color:orangered; font-size: 23px;">chính
+                                                                        xác</span>.</p>
+                                                            </div>
+                                                            <div class="col-md-12 item-features">
+                                                                <p><i style="color:#0aa976" class="fa fa-check"
+                                                                        aria-hidden="true"></i> Giúp công ty<span
+                                                                        style="border-bottom: 3px dotted; color: purple; font-size: 23px;">
+                                                                        giảm thiểu </span> được nguồn nhân sự
+                                                                     nhập liệu.</p>
+                                                            </div>
+                                                            <div class="col-md-12 item-features">
+                                                                <p><i style="color:#0aa976" class="fa fa-check"
+                                                                        aria-hidden="true"></i> Trích xuất (đọc) các
+                                                                    thông tin hoá đơn điện tử <span style="border-bottom: 3px dotted; color: #06aed8; font-size: 23px;"> hoàn toàn tự động </span></p>
+                                                            </div>
+                                                            <div class="col-md-12 item-features">
+                                                                <p><i style="color:#0aa976" class="fa fa-check"
+                                                                        aria-hidden="true"></i> Trích xuất <span style="border-bottom: 3px dotted; color: orangered; font-size: 23px;">số lượng lớn hoá đơn tại 01 thời điểm</span></p>
+                                                            </div>
+                                                            <div class="col-md-12 item-features">
+                                                                <p><i style="color:#0aa976" class="fa fa-check"
+                                                                        aria-hidden="true"></i> Trích xuất định dạng dựa theo các tiêu chuẩn của cục thuế trong nước.</p>
+                                                            </div>
+                                                            <div class="col-md-12 item-features">
+                                                                <p><i style="color:#0aa976" class="fa fa-check"
+                                                                        aria-hidden="true"></i><span style="border-bottom: 3px dotted; color: orange; font-size: 23px;"> Đọc dữ liệu </span> và xuất kết quả thành dữ liệu đầu vào cho <span style="border-bottom: 3px dotted; color: #06aed8; font-size: 23px;">các công cụ kế toán </span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="logo-content text-center">
                                 <img class="logo-introduce" height="270px" src="/images/logo/r-invonce-square.png"
                                     alt="r-invonce-horizal" />
@@ -338,19 +475,19 @@
             </div>
 
             <!-- Quy trình hệ thống -->
-            <div class="col-md-12 pb-5">
+            <div class="col-md-12 pb-5" id="quitrinh">
                 <div class="row pb-5">
                     <div class="col-md-12 text-center">
-                        <h3 class="title title-guide">Quy trình của hệ thống</h3>
+                        <h3 class="title title-guide">Quy trình trích xuất (đọc) nội dung hóa đơn</h3>
                         <hr width="200">
                     </div>
                     <div class="col-lg-12 col-md-12">
                         <div class="container ">
                             <div class="row">
-                                <div class="col-lg-4 col-md-6 pb-3">
+                                <div class="col-lg-4 col-md-4 col-sm-12 pb-3 item-step">
                                     <div class="row">
                                         <div class="image-step col-md-12 mb-4">
-                                            <div class="image-step-detail step1"></div>
+                                            <div class="image-step-detail step step1"></div>
                                         </div>
                                         <div class="content-step col-md-12">
                                             <div class="row">
@@ -359,16 +496,17 @@
                                                 </div>
                                                 <div class="col-md-12 text-step">
                                                     <p>Khách hàng tải các hóa đơn (pdf, xml) vào cổng xử lý dịch vụ
-                                                        "Ehoadon"</p>
+                                                        <strong class="orange"><span class="blue">I</span>nvoice <span
+                                                                class="blue">R</span>eader</strong></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 pb-3">
+                                <div class="col-lg-4 col-md-4 col-sm-12 pb-3">
                                     <div class="row">
                                         <div class="image-step col-md-12 mb-4">
-                                            <div class="image-step-detail step2"></div>
+                                            <div class="image-step-detail step step2"></div>
                                         </div>
                                         <div class="content-step col-md-12">
                                             <div class="row">
@@ -376,14 +514,16 @@
                                                     <h5 class="title-step text-center">Xử lý</h5>
                                                 </div>
                                                 <div class="col-md-12 text-step">
-                                                    <p>Hệ thống "Ehoadon" xử lý đọc và trích xuất thông tin các hóa đơn.
+                                                    <p>Hệ thống <strong class="orange"><span class="blue">I</span>nvoice
+                                                            <span class="blue">R</span>eader</strong> xử lý đọc và trích
+                                                        xuất thông tin các hóa đơn.
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 pb-3">
+                                <div class="col-lg-4 col-md-4 col-sm-12 pb-3">
                                     <div class="row">
                                         <div class="image-step col-md-12 mb-4">
                                             <div class="image-step-detail step3"></div>
@@ -552,16 +692,17 @@
                     <h5 class="mb-4 font-weight-bold">Thông tin liên lạc</h5>
                     <p class="mb-4"></p>
                     <ul class="f-address">
-                        <li>
+                        <li class="mb-3">
                             <div class="row">
                                 <div class="col-1"><i class="fas fa-map-marker"></i></div>
                                 <div class="col-10">
                                     <h6 class="font-weight-bold mb-0">Địa chỉ:</h6>
-                                    <p>06 Trần Văn Ơn, Trường Đại Học Thủ Dầu Một, </p>
+                                    <p>Số 53/14, Phạm Ngọc Thạch, Tổ 56, Khu 5, Phường Hiệp Thành, Thành phố Thủ Dầu
+                                        Một, Tỉnh Bình Dương </p>
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="mb-3">
                             <div class="row">
                                 <div class="col-1"><i class="far fa-envelope"></i></div>
                                 <div class="col-10">
@@ -570,12 +711,12 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="mb-3">
                             <div class="row">
                                 <div class="col-1"><i class="fas fa-phone-volume"></i></div>
                                 <div class="col-10">
                                     <h6 class="font-weight-bold mb-0">SĐT:</h6>
-                                    <p><a href="#">+84 936 929 237</a></p>
+                                    <p><a href="#">+84 914 290 456</a></p>
                                 </div>
                             </div>
                         </li>
@@ -657,6 +798,28 @@
                 $('#logoCop').attr('width', '50px');
             }
         })();
+    </script>
+
+
+    <!-- Scroll to top -->
+    <script>
+        $(document).ready(() => {
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 40) {
+                    console.log("helloasd");
+                    $("#scrollToTop").fadeIn();
+                }
+                else {
+                    $("#scrollToTop").fadeOut();
+                }
+            })
+
+            $("#scrollToTop").click(() => {
+                $(window).scrollTop(0);
+            });
+        })
+
     </script>
 </body>
 

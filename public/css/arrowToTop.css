@@ -1,0 +1,19 @@
+.arrow-to-top {
+    background: rgba(255, 0, 0, 0.5);
+    padding: 16px;
+    font-size: 20px;
+    position: fixed;
+    bottom: 150px;
+    right: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    -webkit-box-shadow: 3px 9px 43px -5px rgba(224, 36, 111, 1);
+    -moz-box-shadow: 3px 9px 43px -5px rgba(224, 36, 111, 1);
+    box-shadow: 3px 9px 43px -5px rgba(224, 36, 111, 1);
+    z-index: 999;
+    display: none;
+    color:#fff;
+}
+.arrow-to-top:hover{
+    color:#fff
+}

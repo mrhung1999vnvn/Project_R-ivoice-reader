@@ -6,6 +6,8 @@
 @import '/public/css/logan.css';
 @import '/public/css/modal/modal.css';
 @import '/public/css/phone.css';
+@import '/public/css/arrowToTop.css';
+
 
 html,
 body,
@@ -86,6 +88,9 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+}
+html{
+    scroll-behavior: smooth;
 }
 
 article,
@@ -198,7 +203,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-section{
+section {
     padding-bottom: 50px;
 }
 
@@ -212,7 +217,7 @@ a:hover {
     text-decoration: none;
 }
 
-.title{
+.title {
     text-transform: capitalize;
     font-weight: bold;
     color: #1a3f77;
@@ -232,7 +237,7 @@ a:hover {
 }
 
 .header_top {
-    padding-top:10px;
+    padding-top: 10px;
 }
 
 .search_box {
@@ -343,24 +348,29 @@ a:hover {
     z-index: 1;
     background: #70389c;
 }
-.active{
-    color:#1a3f77
+
+.active {
+    color: #1a3f77
 }
 
 
 /* Reponsive */
-@media screen and (min-width: 320px), (max-width:319px) {
-    .icon-advantage{
+@media screen and (min-width: 320px),
+(max-width:319px) {
+    .icon-advantage {
         background-color: transparent;
     }
-    .searchbar{
+
+    .searchbar {
         visibility: hidden;
+    }
+
+    .phone-nav{
+        display: none;
     }
 }
 
-@media screen and (min-width: 375px) {
-    
-}
+@media screen and (min-width: 375px) {}
 
 @media screen and (min-width: 384px) {}
 
@@ -370,22 +380,70 @@ a:hover {
 
 @media screen and (min-width: 667px) {}
 
-@media screen and (min-width: 736px) {}
-
-@media screen and (min-width: 772px) {}
-
-@media screen and (min-width: 795px) {
-}
-
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 736px) {
     
 }
 
+@media screen and (min-width: 768px) {
+    .step::after {
+        display: block;
+        content: "\27A0";
+        color:#1a3f77;
+        font-size: 40px;
+        position: relative;
+        top: 70px;
+        left: 200px;
+    }
+}
+
+@media screen and (min-width: 795px) {
+    
+}
+
+@media screen and (min-width: 991px) {
+    .step::after {
+        display: block;
+        content: "\27A0";
+        color:#1a3f77;
+        font-size: 100px;
+        position: relative;
+        top: 30px;
+        left: 210px;
+    }
+    .phone-nav{
+        display: block;
+    }
+}
 @media screen and (min-width: 1000px) {
-    .searchbar{
+    .searchbar {
         visibility: visible;
     }
-    .icon-advantage{
+
+    .icon-advantage {
         background-color: var(--Color-Primary-Orange);
+    }
+    
+}
+
+@media screen and (min-width: 1100px){
+    .step::after {
+        display: block;
+        content: "\27A0";
+        color:#1a3f77;
+        font-size: 100px;
+        position: relative;
+        top: 30px;
+        left: 220px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .step::after {
+        display: block;
+        content: "\27A0";
+        color:#1a3f77;
+        font-size: 100px;
+        position: relative;
+        top: 30px;
+        left: 250px;
     }
 }
