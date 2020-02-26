@@ -34,6 +34,9 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
     <title>Đọc Hóa Đơn Điện Tử | R - Invoice Reader</title>
     <script>
@@ -44,9 +47,19 @@
 </head>
 
 <body>
+
+    <!-- Quảng cáo -->
+    <div class="modal fade" id="myModalQC" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="background" style="background:transparent">
+                <img  src="/images/content/poster.jpg">
+            </div>
+        </div>
+    </div>
+
     <!-- Button back to top-->
     <a href="#" class="arrow-to-top" id="scrollToTop"><i class="fas fa-arrow-up"></i></a>
-
 
 
     <!-- Button Phone  -->
@@ -436,24 +449,34 @@
                                                                         aria-hidden="true"></i> Giúp công ty<span
                                                                         style="border-bottom: 3px dotted; color: purple; font-size: 23px;">
                                                                         giảm thiểu </span> được nguồn nhân sự
-                                                                     nhập liệu.</p>
+                                                                    nhập liệu.</p>
                                                             </div>
                                                             <div class="col-md-12 item-features">
                                                                 <p><i style="color:#0aa976" class="fa fa-check"
                                                                         aria-hidden="true"></i> Trích xuất (đọc) các
-                                                                    thông tin hoá đơn điện tử <span style="border-bottom: 3px dotted; color: #06aed8; font-size: 23px;"> hoàn toàn tự động </span></p>
+                                                                    thông tin hoá đơn điện tử <span
+                                                                        style="border-bottom: 3px dotted; color: #06aed8; font-size: 23px;">
+                                                                        hoàn toàn tự động </span></p>
                                                             </div>
                                                             <div class="col-md-12 item-features">
                                                                 <p><i style="color:#0aa976" class="fa fa-check"
-                                                                        aria-hidden="true"></i> Trích xuất <span style="border-bottom: 3px dotted; color: orangered; font-size: 23px;">số lượng lớn hoá đơn tại 01 thời điểm</span></p>
+                                                                        aria-hidden="true"></i> Trích xuất <span
+                                                                        style="border-bottom: 3px dotted; color: orangered; font-size: 23px;">số
+                                                                        lượng lớn hoá đơn tại 01 thời điểm</span></p>
                                                             </div>
                                                             <div class="col-md-12 item-features">
                                                                 <p><i style="color:#0aa976" class="fa fa-check"
-                                                                        aria-hidden="true"></i> Trích xuất định dạng dựa theo các tiêu chuẩn của cục thuế trong nước.</p>
+                                                                        aria-hidden="true"></i> Trích xuất định dạng dựa
+                                                                    theo các tiêu chuẩn của cục thuế trong nước.</p>
                                                             </div>
                                                             <div class="col-md-12 item-features">
                                                                 <p><i style="color:#0aa976" class="fa fa-check"
-                                                                        aria-hidden="true"></i><span style="border-bottom: 3px dotted; color: orange; font-size: 23px;"> Đọc dữ liệu </span> và xuất kết quả thành dữ liệu đầu vào cho <span style="border-bottom: 3px dotted; color: #06aed8; font-size: 23px;">các công cụ kế toán </span></p>
+                                                                        aria-hidden="true"></i><span
+                                                                        style="border-bottom: 3px dotted; color: orange; font-size: 23px;">
+                                                                        Đọc dữ liệu </span> và xuất kết quả thành dữ
+                                                                    liệu đầu vào cho <span
+                                                                        style="border-bottom: 3px dotted; color: #06aed8; font-size: 23px;">các
+                                                                        công cụ kế toán </span></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -770,7 +793,11 @@
 
 
     <script src="./public/js/custom/smoothscroll.js"></script>
-
+    <script>
+        $(document).ready(function () {
+            $('#myModalQC').modal('show');
+        });
+    </script>
     <!-- tooltip -->
     <script>
         $(document).ready(function () {
@@ -821,6 +848,9 @@
         })
 
     </script>
+
+
+
 </body>
 
 </html>
