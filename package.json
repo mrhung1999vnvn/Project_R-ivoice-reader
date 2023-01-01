@@ -19,8 +19,8 @@
   "homepage": "https://github.com/mrhung1999vnvn/Project_R-ivoice-reader#readme",
   "devDependencies": {
     "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.2",
-    "webpack": "^4.41.6"
+    "sass-loader": "^13.2.0",
+    "webpack": "^5.75.0"
   },
   "dependencies": {
     "bootstrap": "^4.4.1"
